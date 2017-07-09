@@ -1,4 +1,18 @@
-<input type="text" (keyup) = "onKeyup($event)">
+<h2>Github User Search</h2>
+<input type="text" (keyup)="onKeyup($event)">
 <button (click)="getUsers()">Search</button>
 
-<p>{{searchCount}}</p>
+<p ng-show="searchCount > 0"> Count = {{searchCount}}</p>
+
+ 
+<div *ngIf="searchResult">
+    <div >
+        <md-card *ngFor="let user of searchResult.items">
+            <span >
+                  <img class="profile-image" md-card-image src={{user.avatar_url}}>  
+            </span>
+            <h3>{{user.login}}</h3>
+        </md-card>
+    </div>
+</div>
+ 

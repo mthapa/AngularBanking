@@ -6,6 +6,7 @@ import { CircularComponent } from './circular/circular.component';
 import { SearchComponent } from './search/search.component';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import {MdCardModule} from '@angular/material';
 
 
 
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
