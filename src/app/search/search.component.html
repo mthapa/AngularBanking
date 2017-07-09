@@ -2,10 +2,8 @@
 <input type="text" (keyup)="onKeyup($event)">
 <button (click)="getUsers()">Search</button>
 
-<p ng-show="searchCount > 0"> Count = {{searchCount}}</p>
-
- 
 <div *ngIf="searchResult">
+    <p> Count = {{searchCount}}</p>
     <div >
         <md-card class="container" *ngFor="let user of searchResult.items">
             <span >
