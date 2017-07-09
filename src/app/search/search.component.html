@@ -7,7 +7,7 @@
  
 <div *ngIf="searchResult">
     <div >
-        <md-card *ngFor="let user of searchResult.items">
+        <md-card class="container" *ngFor="let user of searchResult.items">
             <span >
                   <img class="profile-image" md-card-image src={{user.avatar_url}}>  
             </span>
@@ -15,4 +15,5 @@
         </md-card>
     </div>
 </div>
+
  
