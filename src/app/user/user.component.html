@@ -1,0 +1,15 @@
+<h2>GitHub User Information</h2>
+
+<div *ngIf="user">
+  <h2>Login: {{user.login}}</h2>
+  <h3>Name: {{user.name}}
+  </h3>
+  <p>Email: {{user.email}}</p>
+  <p>Followers: {{user.followers}}</p>
+  <p>Since:{{user.created_at | date }}</p>
+
+  <div>
+    <img class="profile-image" md-card-image src={{user.avatar_url}}>
+  </div>
+
+</div>

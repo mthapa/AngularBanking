@@ -4,14 +4,16 @@
 
 <div *ngIf="searchResult">
     <p> Count = {{searchCount}}</p>
-    <div >
-        <md-card class="container" *ngFor="let user of searchResult.items">
-            <span >
+    <div>
+        <md-card class="container" *ngFor="let user of searchResult.items">           
+            <md-card-content >
+            <div>
                   <img class="profile-image" md-card-image src={{user.avatar_url}}>  
-            </span>
-            <h3>{{user.login}}</h3>
+            </div>
+            </md-card-content>
+             <md-card-title>
+                <a md-raised-button (click)="showUserDetail(user)">{{user.login}}</a>
+            </md-card-title>
         </md-card>
     </div>
 </div>
-
- 

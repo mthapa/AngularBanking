@@ -14,18 +14,31 @@ export class GithubService {
 
   getUser(searchText): Observable<any> {
     if (searchText == null) {
-      //console.log("error");
       return Observable.empty<Response>();
     } else {
       const url = 'https://api.github.com/search/users?q=' + searchText;
       return this.http.get(url).map(
         res => {
-          const data = res.json();
-          //console.log("from the githubService");
-          console.log(data);
+          const data = res.json();          
           return data;
         }
       )
     }
   }
+
+  getUserDetail(userId):Observable<any>{
+    if (userId == null) {      
+      return Observable.empty<Response>();
+    } else {
+      const url = 'https://api.github.com/users/' + userId;
+      return this.http.get(url).map(
+        res => {
+          const user = res.json();          
+          return user;
+        }
+      )
+    }
+  }
+
+  
 }

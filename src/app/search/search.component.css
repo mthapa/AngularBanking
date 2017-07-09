@@ -1,14 +1,16 @@
 .carddemoBasicUsage .card-media {
-  background-color: #999999; }
+  background-color: #999999;
+}
 
-  .profile-image{
-      width: 80px;
-      height: 80px;
-  }
+.profile-image {
+  width: 80px;
+  height: 80px;
+}
 
-  .container {
-      width: 150px;
-      height: 150px;
-      margin: 5px;
-      float: left;
-  }
+.container {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  float: left;
+  text-align: center;
+}
